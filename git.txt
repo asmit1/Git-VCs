@@ -1,0 +1,133 @@
+#CREATE A REPO --
+*******************************
+git init
+git clone
+git status
+*******************************
+git init : create a new repository 
+git clone : clone the existing repository from somewhere else 
+git status : check the status of the repository
+
+#REVIEW A REPO --
+*********************
+git log 
+git log --oneline
+git log --stat
+git log -p
+*********************
+
+git log : display information about the existing commits
+git show : display information about the given commit
+
+git log --oneline : SHA id and the commit messages .Alters the way of displaying information.
+       ******not online it's oneline******
+
+q key can be used to get out of the git log --oneline and return to the regular command prompt.
+
+git log --stat : stat refers to statistics. This command display the files that have been changed in the commit, as well as the number of lines that have been added or deleted.
+
+git log -p : p refers to patch.This command can be used to display the actual changes made to a file.
+
+#ADD & COMMIT TO THE REPOSITORY --
+******************************
+git add
+git commit 
+git diff
+git ignore
+******************************
+git add : add files from the working directory to staging index.
+git commit : takes files from the staging index and save them to the repository.
+git diff : displays the difference between two versions of the file
+git ignore : 
+
+Bypass The Editor With The -m Flag
+git commit -m "Commit Messages"
+
+Note: If you accidentally ran git add then use git rm --cached <file > to unstage
+
+also $ git config --global core.editor <your-editor's-config-went-here>
+              configure Git to use your chosen editor
+
+#TAGGING , BRANCHING & MERGING --
+***********************************
+git tag 
+git checkout
+git branch 
+git merge
+***********************************
+git tag : add tag to specific commits
+git branch : allow multiple lines of development
+git checkout : switch between different tags and branches
+git merge : combine changes of different branches
+
+git tag : point out particular commits to make them standout from others.
+git tag -a : annonated tag.
+git tag : lightweighted tag
+
+annonated tags are recommed because they include extra information
+-the person who made the tag 
+-the date the tag was made 
+-a message for the tag
+
+git log --decorate 
+
+git branch : is used to :
+-list all the branch name in the repository
+-create new branches
+-delete branches
+
+$ git branch sidebar : creates a new branch call sidebar
+ but the command prompt still displays current branch i.e master
+unless  $ git  checkout sidebar command is used 
+
+$ git branch alt-sidebar-loc 42a69f will create the alt-sidebar-loc branch and have it point 
+to commit with SHA 42a69f
+
+$ git branch -d sidebar : delete a branch named sidebar
+
+# to list all branches : $ git branch
+
+# to create a new "footer-fix" branch : $ git branch footer-fix
+
+# to delete the "footer-fix" branch : $ git branch -d footer-fix
+
+$ git checkout -b : command can actually create a new branch, too
+
+$ git checkout -b footer master : command to create our new footer branch and have this footer branch start at the same location as the master branch
+
+Combining branches together is called merging
+
+git reset --hard HEAD^ : use this command to undo the merge
+
+When we merge, we're merging some other branch into the current (checked-out) branch
+ We're not merging two branches into a new branch. We're not merging the current branch into the other branch.
+
+git merge footer : Both footer and master are pointing at the same commit.
+
+The editor has the following merge conflict indicators:
+
+<<<<<<< HEAD everything below this line (until the next indicator) shows you what's on the current branch
+
+||||||| merged common ancestors everything below this line (until the next indicator) shows you what the original lines were
+
+======= is the end of the original lines, everything that follows (until the next indicator) is what's on the branch that's being merged in
+
+>>>>>>> heading-update is the ending indicator of what's on the branch that's being merged in (in this case, the heading-update branch)
+
+#UNDOING CHANGES --
+*********************
+git commit --amend
+git revert 
+git reset
+*********************
+git commit --amend : alter the most-recent commit
+git revert 4af23ae : reverses given commit for eg: 4af23ae
+git reset : erases commit 
+
+
+
+
+
+
+
+

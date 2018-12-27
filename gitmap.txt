@@ -1,0 +1,32 @@
+what is version control system?
+
+create a repo
+*******************************
+	git init
+	git clone 
+	git status
+
+*******************************
+
+
+review repo
+
+*********************
+	git log 
+	git log --oneline
+	git log --stat
+	git log -p
+*********************
+
+add commits to repo
+
+******************************
+	git add
+	git commit
+	git diff
+******************************
+
+tagging,branching and merging 
+
+
+undoing changes
