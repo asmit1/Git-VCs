@@ -1,0 +1,17 @@
+Version Control System or Source Code Manager : Simply tracks the changes in the file 
+.In other words ,VCS manages different version of source code.
+
+Commit : Saves project file and any information about them.
+
+Repository/repo : directory which contains project work which are used to communicate with Git . Repository can either exists locally on your computer or remote copy on other computer.
+
+Working Directory : The folder in which you are currently working .
+
+Staging index : A file in the Git directory that stores the information about what will go into the next commit.
+
+Branch : A branch is created when a new line of development diverges from the main line of development.
+
+
+
+
+
